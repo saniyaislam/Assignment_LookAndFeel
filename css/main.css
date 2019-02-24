@@ -1,47 +1,199 @@
-/**
-Sample css code
-*/
-/* Set height to 100% for body and html to enable the background image to cover the whole page: */
-body,
-html {
-  height: 100%;
+body {
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
 }
 
-/*Set background image*/
+/* Global */
 .container {
-  background-image: url('https://doc-10-ao-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/r085o9ungppbiokopob2sfbekae4uqbb/1537920000000/14802840322886517493/*/110cT8sl-pOiHGgj9yToPkAqAzrr-RNfb');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-/* Position text in the middle */
-.middle {
-  position: absolute;
-  color: beige;
-  top: 70%;
-  left: 39%;
-  text-align: center;
-  font-size: 25px;
+ul {
+    margin: 0;
+    padding: 0;
 }
 
-/*Set circle in unordered list*/
-.middle ul {
-  list-style-type: circle;
+.button_1 {
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
 }
 
-/*Set text inside li tag to left*/
-.middle ul li {
-  text-align: left !important;
+.dark {
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/*Set text color for a tag inside middle class and ul>li element*/
-.middle ul li a {
-  color: beige;
+/* Header **/
+header {
+    background: black;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
 }
 
-/*Change text color and decoration for a tags inside middle class and ul>li element*/
-.middle ul li a:hover {
-  color: red;
-  text-decoration: none;
+    header a {
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    header li {
+        float: left;
+        display: inline;
+        padding: 0 20px 0 20px;
+    }
+
+    header #branding {
+        float: left;
+    }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+    header nav {
+        float: right;
+        margin-top: 10px;
+    }
+
+    header .highlight, header .current a {
+        color: indianred;
+        font-weight: bold;
+    }
+
+#main-col .highlight {
+    color: indianred;
+    font-weight: bold;
 }
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase */
+#showcase {
+    min-height: 400px;
+    background: url('../img/menu.jpeg') no-repeat;
+    /*background-color:#87ceeb;*/
+    text-align: center;
+    color: #ffffff;
+    width:100%;
+}
+
+    #showcase h1 {
+        margin-top: 100px;
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+
+    #showcase p {
+        font-size: 20px;
+    }
+
+
+/* Boxes */
+#boxes {
+    margin-top: 20px;
+}
+
+    #boxes .box {
+        float: left;
+        text-align: center;
+        width: 30%;
+        padding: 10px;
+    }
+
+        #boxes .box img {
+            width: 90px;
+            height: 50px;
+        }
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: darkred;
+    text-align: center;
+}
+
+
+/* Media Queries */
+@media(max-width: 768px) {
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    #showcase h1 {
+        margin-top: 40px;
+    }
+
+    #newsletter button, .quote button {
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter form input[type="email"], .quote input, .quote textarea {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.wd-100{
+    width:100%;
+}
+.hd-20 {
+    height: 20px;
+}
+ .column {
+  float: left;
+  width: 50%;
+}
+
+@media(max-width: 1400px) {
+    .column {
+        width: 100%;
+    }
+}
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .reservation {
+        font-family: Arial;
+        color: white;
+        font-size: 30px;
+    }
+
+    .pd-20 {
+        padding-bottom: 20px;
+    }
